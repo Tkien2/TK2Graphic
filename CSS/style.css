@@ -1,0 +1,73 @@
+:root{
+    --headerBGColor: rgb(25, 26, 27);
+    --headerShadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(0deg, rgb(14, 14, 15), rgb(29, 30, 31));
+    font-family: "Varela Round", "Helvetica";
+    background-attachment: fixed;
+}
+body, textarea, input{
+    color: white;
+    font-family: "Varela Round", "Helvetica";
+}
+button{
+    font-family: "Varela Round", "Helvetica";
+}
+.header{
+    min-width: calc(100vw - 60px);
+    position: fixed;
+    top: 0;
+    background-color: var(--headerBGColor);
+    box-shadow: var(--headerShadow);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 50px;
+}
+.header__logo__logoName{
+    font-size: 30px;
+    margin: 0;
+}
+.ggicon{
+    font-size: 35px;
+    cursor: pointer;
+}
+main{
+    padding-top: 80px;
+}
+p{
+    font-size: 17px;
+    color: rgb(228, 230, 236)
+}
+a{
+    font-style: none;
+    color: white;
+    text-decoration: none;
+}
+.header__menuList>li, .header__menuList{
+    transition-duration: 0.2s;
+}
+.header__menuList{
+    display: none;
+    position: fixed;
+    right: 30px;
+    list-style: none;
+    box-shadow: var(--headerShadow);
+    padding: 0;
+}
+.header__menuList>li{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--headerBGColor);
+    cursor: pointer;
+}
+.header__menuList>li:hover{
+    background-color: rgb(44, 46, 48);
+}
+main{
+    padding: 100px 20px 20px 20px;
+}

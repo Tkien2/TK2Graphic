@@ -1,0 +1,36 @@
+main{
+    padding: 100px 20px 20px 20px;
+}
+.projectList__box{
+    min-height: 170px;
+    min-width: 120px;
+    max-width: 120px;
+    background: linear-gradient(45deg, rgb(106, 139, 247), rgb(174, 108, 255));
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 10px;
+    transition-duration: 0.3s;
+}
+.projectList__box::before{
+    content: "";
+    height: 165px;
+    width: 115px;
+    background-color: rgb(27, 28, 30);
+    position: absolute;
+    border-radius: 13px;
+    z-index: 0;
+}
+.projectList__box:hover{
+    background: linear-gradient(45deg, rgb(72, 110, 235), rgb(143, 57, 249));
+}
+.projectList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ggicon{
+    z-index: 1;
+}

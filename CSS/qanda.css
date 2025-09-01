@@ -1,0 +1,20 @@
+.questionWraper{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.answer{
+    padding: 10px;
+}
+.questionAndAnswer{
+    overflow: hidden;
+}
+.answer, .questionAndAnswer, .questionWraper{
+    transition-duration: 0.3s;
+}
+.dropDownIcon{
+    transition: transform 0.3s;
+}

@@ -1,0 +1,25 @@
+main{
+    padding: 130px 80px 40px 40px;
+}
+h1{
+    font-size: 35px;
+}
+p{
+    max-width: 85%;
+}
+.startButton{
+    font-size: 20px;
+    padding: 15px 50px;
+    border: 0px;
+    border-radius: 40px;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: rgb(255, 255, 255, 0.45) 0 0 15px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.startButton:hover{
+    background-color: rgb(33, 33, 35);
+    color: white;
+    box-shadow: rgb(255, 255, 255, 0.25) 0 0 15px;
+}

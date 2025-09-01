@@ -1,0 +1,30 @@
+.projectNameInput{
+    background-color: rgba(40, 42, 46, 0.295);
+    outline: none;
+    border: 0px;
+    font-size: 17px;
+    width: 13ch;
+    margin: 5px 5px 5px 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.projectNameWrap{
+    display: flex;
+    justify-content: center;
+}
+.valueName{
+    margin: 10px 5px 10px 10px;
+}
+.infoBox__wrap{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 2px solid rgb(50, 52, 55);
+    padding: 10px;
+}
+.inputWrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
