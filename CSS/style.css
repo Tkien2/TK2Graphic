@@ -5,7 +5,7 @@
 body{
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(0deg, rgb(14, 14, 15), rgb(29, 30, 31));
+    background: linear-gradient(0deg, rgb(14, 14, 15), rgb(36, 37, 40));
     font-family: "Varela Round", "Helvetica";
     background-attachment: fixed;
 }

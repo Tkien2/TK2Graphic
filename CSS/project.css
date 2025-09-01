@@ -1,31 +1,32 @@
 main{
     padding: 100px 20px 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .projectList__box{
+    position: relative;
     min-height: 170px;
     min-width: 120px;
     max-width: 120px;
-    background: linear-gradient(45deg, rgb(106, 139, 247), rgb(174, 108, 255));
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin: 10px;
     transition-duration: 0.3s;
-}
-.projectList__box::before{
-    content: "";
-    height: 165px;
-    width: 115px;
-    background-color: rgb(27, 28, 30);
-    position: absolute;
-    border-radius: 13px;
     z-index: 0;
+    background-color: rgb(35, 35, 37);
+}
+.boxBorder{
+    margin: 10px;
+    background: linear-gradient(45deg, rgb(71, 114, 255), rgb(47, 255, 151));
+    padding: 3px;
+    border-radius: 18px;
 }
 .projectList__box:hover{
-    background: linear-gradient(45deg, rgb(72, 110, 235), rgb(143, 57, 249));
+    background-color: rgba(0, 0, 0, 0);
 }
 .projectList{
     display: flex;

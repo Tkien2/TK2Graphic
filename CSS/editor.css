@@ -1,13 +1,27 @@
-.projectNameInput{
-    background-color: rgba(40, 42, 46, 0.295);
+:root{
+    --inputBGColor: rgba(40, 42, 46, 0.295);
+    --toolListColor: rgba(14, 14, 15);
+}
+/* Code này lụm từ ChatGPT, ẩn mũi tên input */
+/* Ẩn mũi tên trên Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* ------------------- */
+.projectNameInput, input{
+    background-color: var(--inputBGColor);
     outline: none;
     border: 0px;
     font-size: 17px;
     width: 13ch;
-    margin: 5px 5px 5px 10px;
     padding: 10px;
     border-radius: 10px;
-    position: relative;
+    height: 30px;
+}
+.projectNameInput{
+    width: 40vw;
 }
 .projectNameWrap{
     display: flex;
@@ -16,15 +30,146 @@
 .valueName{
     margin: 10px 5px 10px 10px;
 }
-.infoBox__wrap{
+.infoBox{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     border-radius: 10px;
     border: 2px solid rgb(50, 52, 55);
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    width: 80vw;
+    max-height: 50vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.infoBox__wrap{
+    margin: 10px;
 }
 .inputWrap{
+    margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
+    margin: 5px 5px 5px 10px;
+    align-items: center;
+}
+.ratioInput{
+    width: 50px;
+}
+.inputName{
+    font-size: 20px;
+}
+.inputMessageWrap{
+    position: absolute;
+    transform: translate(10px, 55px);
+    display: none;
+    align-items: center;
+    color: rgb(255, 131, 131);
+}
+.inputMessage{
+    font-size: 13px;
+    color: rgb(255, 131, 131);
+    padding: 0;
+    margin: 0;
+}
+.inputMessageWrap__icon{
+    font-size: 15px;
+    margin: 5px;
+}
+#projectRatioModel{
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    margin-left: 20px;
+}
+.buttonWrap{
+    display: flex;
+    justify-content: center;
+}
+#startProjectButton{
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 0px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    z-index: -1;
+    background-color: rgb(33, 34, 36);
+}
+#startProjectButton:hover{
+    background-color: rgba(0, 0, 0, 0);
+}
+.buttonBorder{
+    border-radius: 13px;
+    width: 100%;
+    padding: 3px;
+    background: linear-gradient(45deg, rgb(74, 71, 243), rgb(230, 108, 47));
+}
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 0 0;
+}
+.pageArea{
+    min-height: calc(100vh - 80px - 80px);
+    background-color: rgb(23, 23, 24);
+    z-index: 1;
+}
+.toolList{
+    width: calc(100vw - 80px);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin: 0 40px 0 40px;
     flex-wrap: nowrap;
+    overflow-x: scroll;
+    background-color: var(--toolListColor);
+}
+.toolList::-webkit-scrollbar{
+    height: 0;
+}
+.toolList::before{
+    content: "";
+    width: 40px;
+    height: 80px;
+    background-color: var(--toolListColor);
+    position: absolute;
+    box-shadow: 10px 0 5px var(--toolListColor);
+    left: 0;
+}
+.toolList::after{
+    content: "";
+    width: 40px;
+    height: 80px;
+    background-color: var(--toolListColor);
+    position: absolute;
+    box-shadow: -10px 0 5px var(--toolListColor);
+    right: 0;
+}
+.toolList__tool{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80px;
+    margin: 0 5px;
+    height: 100%;
+    padding: 0 10px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+.toolList__tool:hover{
+    color: rgba(148, 187, 255, 0);
+    background-image: linear-gradient(45deg, rgb(134, 174, 255), rgb(155, 255, 180));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.toolList__tool__name{
+    font-size: 13px;
+    text-align: center;
 }

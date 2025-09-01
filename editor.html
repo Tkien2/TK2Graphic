@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Varela+Round&display=swap" rel="stylesheet">
     <!-- GG Icon -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=menu" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&icon_names=add,add_photo_alternate,menu,warning" rel="stylesheet" />
     <!-- Nhúng file -->
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/editor.css">
@@ -22,10 +22,39 @@
             <div class="projectNameWrap infoBox__wrap">
                 <div class="inputWrap">
                     <input class="projectNameInput" id="projectNameValue" placeholder="Tên dự án"><p>.tk2g</p>
-                    <span class="inputMessage"></span>
+                    <span class="inputMessageWrap" id="inputMessageWrap--projectName"><span class="inputMessageWrap__icon material-symbols-rounded">warning</span><p class="inputMessage--projectName" id="inputMessage"></p></span>
+                </div>
+            </div>
+            <div class="ratioWrap infoBox__wrap">
+                <div class="inputName">Tỉ lệ:</div>
+                <div class="inputWrap">
+                    <input autocomplete="off" type="number" class="widthInput ratioInput" id="widthValue" placeholder="Rộng">
+                    <p>:</p>
+                    <input autocomplete="off" type="number" class="heightInput ratioInput" id="heightValue" placeholder="Cao">
+                    <span class="inputMessageWrap" id="ratioMessageWrap"><span class="inputMessageWrap__icon material-symbols-rounded">warning</span><p class="inputMessage" id="ratioMessage"></p></span>
+                    <div id="projectRatioModel"></div>
+                </div>
+            </div>
+            <div class="buttonWrap infoBox__wrap">
+                <div class="buttonBorder">
+                    <button id="startProjectButton"><span style="z-index: 1;">Tạo</span></button>
                 </div>
             </div>
         </div>
+        <!-- editor thật này -->
+         <div class="pageArea">
+            <div class="pageArea__page"></div>
+         </div>
+         <div class="toolList">
+            <div class="toolList__tool">
+                <span class="toolList__tool__icon material-symbols-rounded">add</span>
+                <div class="toolList__tool__name">Thêm đối tượng</div>
+            </div>
+            <div class="toolList__tool">
+                <span class="toolList__tool__icon material-symbols-rounded">add_photo_alternate</span>
+                <div class="toolList__tool__name">Nhập ảnh</div>
+            </div>
+         </div>
     </main>
 </body>
 <!-- Phải để script ở đây, chứ mấy cái kia load trễ quá -->
