@@ -2,6 +2,10 @@
     --headerBGColor: rgb(25, 26, 27);
     --headerShadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
+body::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
 body{
     min-height: 100vh;
     margin: 0;
@@ -27,6 +31,7 @@ button{
     align-items: center;
     justify-content: space-between;
     min-height: 50px;
+    z-index: 99;
 }
 .header__logo__logoName{
     font-size: 30px;
@@ -41,7 +46,7 @@ main{
 }
 p{
     font-size: 17px;
-    color: rgb(228, 230, 236)
+    color: rgba(228, 230, 236, 0.8)
 }
 a{
     font-style: none;
@@ -70,4 +75,7 @@ a{
 }
 main{
     padding: 100px 20px 20px 20px;
+}
+p, span, .material-symbols-rounded, .ggicon{
+    user-select: none;
 }
